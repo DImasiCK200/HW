@@ -1,0 +1,96 @@
+#1 ZADACHA
+
+n = int(input())
+
+if (n > 10 and n < 22) or (n > 30 and n < 40):
+    print('Точка в множестве')
+else:
+    print('Точка вне множестве')
+    
+#2 ZADACHA
+
+n = int(input())
+m = int(input())
+
+if ((n > -5 and n <= 0) and (m > -5 and m <= 0)) or ((n > 2 and n <= 7) and (m > 2 and m <= 7)):
+    print('Да')
+else:
+    print('Нет')
+
+#3 ZADACHA
+
+S = float(input())
+t = float(input())
+
+v = S / t
+
+if v < 30:
+    print('Медленно')
+elif v >= 30 and v <= 60:
+    print('Средне')
+else:
+    print('Быстро')
+
+#4 ZADACHA
+
+n = int(input())
+x = n
+a = []
+
+while n > 0:
+    a.append(n % 10)
+    n //= 10
+a = a[::-1]
+
+if max(a) - min(a) == a[1]:
+    print('Число ', x, ' - "интересное"')
+else:
+    print('Число ', x, ' - не "интересное"')
+    
+#5 ZADACHA
+
+s = str(input())
+
+n = len(s)
+
+if n < 3:
+    print('Ник-нейм должен состоять минимум из 3 символов')
+elif n > 15:
+    print('Ник-нейм должен состоять максимум из 15 символов')
+else:
+    print('Ник-нейм принят')
+    
+#6 ZADACHA
+
+def f(x, y):
+    return (2 * abs(x) - y) / (y ** 2)
+
+x, y = map(int, input().split())
+
+if x > 0:
+    if y < 0:
+        print('Точка принадлежит 4 четверти')
+        if abs(x) > abs(y):
+            print('Координата х - наибольшая по модулю')
+        elif abs(x) < abs(y):
+            print('Координата у - наибольшая по модулю')
+        else:
+            print('Координаты равны по модулю')
+    else:
+        print('Точка принадлежит 1 четверти')
+        print('Введите две строки:')
+        s1 = str(input())
+        s2 = str(input())
+        if len(s1) < len(s2):
+            print(s1)
+        else:
+            print(s2)
+else:
+    if y < 0:
+        print('Точка принадлежит 3 четверти')
+        print('Введите строку')
+        s1 = int(input())
+        print(x * len(s1), y * len(s1))
+    else:
+        print('Точка принадлежит 2 четверти')
+        print(f(x, y))

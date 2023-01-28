@@ -1,0 +1,21 @@
+from random import randint
+n = int(input())
+f = open('hw.txt', w)
+for i in range(n):
+    s = randint(1, 1000)
+    f.write(s)
+    
+from random import randint
+import math
+a = int(input())
+b = int(input())
+h = int(input())
+f = open('hw.txt', w)
+for i in range(a, b + 1, h):
+    x = i
+    f.write(x * math.ln(1 + math.sin(x)/x)/(x+math.sin(x)))
+    
+f = open('hw.txt')
+f = f.readlines()
+print('I recieve' + f[randint(0, len(f))
+print('You receive' + f[randint(0, len(f))
